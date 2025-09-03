@@ -2,18 +2,10 @@ import React, { useMemo, useState } from "react";
 
 // ---- Image placeholders ----------------------------------------------------
 const TRUMP_IMG =
-  "data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'>\
-    <circle cx='80' cy='80' r='60' fill='%23b91c1c' stroke='%23fff' stroke-width='4'/>\
-    <text x='80' y='95' font-size='44' text-anchor='middle' fill='white' font-family='Arial Black'>DT</text>\
-  </svg>";
+  "/trump-head.png";
 
 const BIDEN_IMG =
-  "data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'>\
-    <circle cx='80' cy='80' r='60' fill='%233b82f6' stroke='%23fff' stroke-width='4'/>\
-    <text x='80' y='95' font-size='44' text-anchor='middle' fill='white' font-family='Arial Black'>JB</text>\
-  </svg>";
+  "/biden-head.png";
 
 // ---- Helpers ---------------------------------------------------------------
 const LINES = [
