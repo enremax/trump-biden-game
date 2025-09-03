@@ -46,7 +46,7 @@ function Prelander({ onStart }) {
   return (
     <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-6">
       <div className="w-full max-w-3xl space-y-6 bg-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden<br>Tic Tac Toe Challenge</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden</br>Tic Tac Toe Challenge</h1>
 
         <div className="flex justify-center">
           <img src="/tb.jpg" alt="Trump vs Biden" className="rounded-2xl shadow-xl max-h-56 w-auto" />
