@@ -5,7 +5,7 @@ const TRUMP_IMG =
   "/trump-head.png";
 
 const BIDEN_IMG =
-  "/biden-head.png";
+  "/joe-head.png";
 
 // ---- Helpers ---------------------------------------------------------------
 const LINES = [
