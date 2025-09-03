@@ -51,7 +51,10 @@ function Prelander({ onStart }) {
           <img src="/tb.jpg" alt="Trump vs Biden" className="rounded-2xl shadow-xl max-h-56 w-auto" />
         </div>
       
-
+        <div className="flex justify-center">
+          <button onClick={onStart} className="px-10 py-5 rounded-2xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-extrabold text-xl tracking-wide shadow-[0_8px_20px_rgba(220,38,38,0.45)]">
+            Click Here To Play
+          </button>
 
                 <div className="p-5 rounded-2xl bg-slate-700 shadow-xl">
           <h2 className="text-xl font-bold mb-3 justify-center">Today’s Prize (Trump Mystery Box)</h2>
@@ -60,10 +63,7 @@ function Prelander({ onStart }) {
           </div>
         </div>
         
-        <div className="flex justify-center">
-          <button onClick={onStart} className="px-10 py-5 rounded-2xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-extrabold text-xl tracking-wide shadow-[0_8px_20px_rgba(220,38,38,0.45)]">
-            Click Here To Play
-          </button>
+
         </div>
       </div>
     </div>
