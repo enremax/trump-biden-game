@@ -28,8 +28,37 @@ function availableMoves(board) {
 function mediumBotMove(board) {
   const moves = availableMoves(board);
   if (moves.length === 0) return null;
-  for (const m of moves) { const c = board.slice(); c[m] = 'O'; if (winnerOf(c) === 'O') return m; }
-  for (const m of moves) { const c = board.slice(); c[m] = 'X'; if (winnerOf(c) === 'X') return m; }
+  
+  // Always take winning moves (must do this or it's obviously throwing)
+  for (const m of moves) { 
+    const c = board.slice(); 
+    c[m] = 'O'; 
+    if (winnerOf(c) === 'O') return m; 
+  }
+  
+  // Only block winning moves 5% of the time (very rarely)
+  if (Math.random() < 0.05) {
+    for (const m of moves) { 
+      const c = board.slice(); 
+      c[m] = 'X'; 
+      if (winnerOf(c) === 'X') return m; 
+    }
+  }
+  
+  // Prefer suboptimal moves that seem reasonable:
+  
+  // 1. Avoid the center (center is strongest position)
+  const nonCenterMoves = moves.filter(m => m !== 4);
+  if (nonCenterMoves.length > 0 && Math.random() < 0.8) {
+    // 2. Prefer edges over corners (edges are weaker than corners)
+    const edges = [1, 3, 5, 7].filter(i => nonCenterMoves.includes(i));
+    if (edges.length > 0 && Math.random() < 0.7) {
+      return edges[Math.floor(Math.random() * edges.length)];
+    }
+    return nonCenterMoves[Math.floor(Math.random() * nonCenterMoves.length)];
+  }
+  
+  // Fallback to any available move
   return moves[Math.floor(Math.random() * moves.length)];
 }
 
