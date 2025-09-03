@@ -51,11 +51,11 @@ function Prelander({ onStart }) {
           <img src="/tb.jpg" alt="Trump vs Biden" className="rounded-2xl shadow-xl max-h-56 w-auto" />
         </div>
         
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden — Tic Tac Toe Challenge</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden<br></br>Tic Tac Toe Challenge</h1>
 
 
                 <div className="p-5 rounded-2xl bg-slate-700 shadow-xl">
-          <h2 className="text-xl font-bold mb-3">Today’s Prize</h2>
+          <h2 className="text-xl font-bold mb-3">Today’s Prize (Trump Mystery Box)</h2>
           <div className="flex justify-center">
             <img src="/prize.webp" alt="Trump Mystery Box" className="rounded-xl max-h-56 w-auto" />
           </div>
