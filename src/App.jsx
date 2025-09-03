@@ -148,11 +148,6 @@ function Game() {
     setLoseOpen(false);
   };
 
-  const exitPage = () => {
-    window.open('', '_self');
-    window.close();
-    window.location.href = window.location.href;
-  };
 
   return (
     <div className="w-full max-w-xl">
