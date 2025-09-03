@@ -46,25 +46,46 @@ function Prelander({ onStart }) {
   return (
     <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center p-6">
       <div className="w-full max-w-3xl space-y-6 bg-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden<br></br>Tic Tac Toe Challenge</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center">Trump vs. Biden — Tic Tac Toe Challenge</h1>
+
         <div className="flex justify-center">
           <img src="/tb.jpg" alt="Trump vs Biden" className="rounded-2xl shadow-xl max-h-56 w-auto" />
         </div>
-      
-        <div className="flex justify-center">
-          <button onClick={onStart} className="px-10 py-5 rounded-2xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-extrabold text-xl tracking-wide shadow-[0_8px_20px_rgba(220,38,38,0.45)]">
-            Click Here To Play
-          </button>
 
                 <div className="p-5 rounded-2xl bg-slate-700 shadow-xl">
-          <h2 className="text-xl font-bold mb-3 justify-center">Today’s Prize (Trump Mystery Box)</h2>
+          <h2 className="text-xl font-bold mb-3">Today’s Prize: Trump Mystery Box</h2>
           <div className="flex justify-center">
             <img src="/prize.webp" alt="Trump Mystery Box" className="rounded-xl max-h-56 w-auto" />
           </div>
         </div>
-        
 
+        <div className="flex justify-center">
+          <button onClick={onStart} className="px-10 py-5 rounded-2xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-extrabold text-xl tracking-wide shadow-[0_8px_20px_rgba(220,38,38,0.45)]">
+            Click Here To Play
+          </button>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-5 rounded-2xl bg-slate-700 shadow-xl">
+            <h2 className="text-xl font-bold mb-2">How it works</h2>
+            <ul className="list-disc list-inside text-sm opacity-90 space-y-1">
+              <li>You (Trump) play as <strong>X</strong>.</li>
+              <li>The bot (Biden) plays as <strong>O</strong>.</li>
+              <li>First to align three in a row wins (row, column, or diagonal).</li>
+              <li>Game difficulty: <em>medium-easy</em>.</li>
+            </ul>
+          </div>
+          <div className="p-5 rounded-2xl bg-slate-700 shadow-xl">
+            <h2 className="text-xl font-bold mb-2">Rules</h2>
+            <ul className="list-disc list-inside text-sm opacity-90 space-y-1">
+              <li><strong>Win to get a FREE Trump Mystery Box</strong> (worth up to $300).</li>
+              <li>One move per turn.</li>
+              <li>If you lose, you can replay or exit.</li>
+            </ul>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
